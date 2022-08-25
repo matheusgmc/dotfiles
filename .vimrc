@@ -13,12 +13,7 @@ set cursorline
 "timing for each updating vim"
 set updatetime=100
 
-"add theme dracula"
-packadd! dracula
-colorscheme dracula
-
 """HighLight Settings"""
-hi Normal guibg=NONE ctermbg=NONE
 "enable highlight search pattern "
 set hlsearch
 
@@ -49,14 +44,21 @@ Plug 'tpope/vim-fugitive'
 Plug 'vimsence/vimsence'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
-"Plug 'ap/vim-css-color'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'yaegassy/coc-tailwindcss3', {'do': 'yarn install --frozen-lockfile'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons' " Icons
 call plug#end()
+
+"add theme dracula"
+packadd! dracula
+colorscheme dracula
+
+""background transparent
+hi Normal guibg=NONE ctermbg=NONE
 
 """Vim Settings - map"""
 "copy in visual mode for system clipboard using ctrl + c
