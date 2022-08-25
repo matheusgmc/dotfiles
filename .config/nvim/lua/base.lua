@@ -8,4 +8,5 @@ vim.opt.autoindent = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cursorline = true
 vim.opt.title = true
+vim.opt.updatetime = 300
 vim.opt.titlestring =  "%<%F%= - nvim"
