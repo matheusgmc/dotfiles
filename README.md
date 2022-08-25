@@ -23,7 +23,7 @@
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
 - [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
-- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 
 ## Vim
 ##### Tema - [dracula](https://draculatheme.com/vim)
