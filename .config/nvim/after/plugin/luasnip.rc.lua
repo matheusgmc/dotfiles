@@ -49,9 +49,35 @@ add_snip("javascript",{
     },{
       func(function()return vim.fn.expand("%:t"):find(".js") and "class " or "export class " end,{}),
       func(name_usecase,{}),
-      text({"{","constructor(){}","async execute(){","}","}"}),
-      func(function()return vim.fn.expand("%:t"):find(".js") and "module.export = "..name_usecase() or "" end,{}),
+      text({"{","constructor(){}","async execute(){","}","}",""}),
+      func(function()return vim.fn.expand("%:t"):find(".js") and {"module.export = "..name_usecase()}or "" end,{}),
       
+    }),
+  snip({
+    trig = "entity",
+    namr = "entity",
+    dscr = "cria uma entidade",
+  },{
+      func(function()return vim.fn.expand("%:t"):find(".js") and "class " or "export class " end,{}),
+      func(function()return vim.fn.expand("%:t"):match("%a*"):gsub("^%l",string.upper)end,{}),
+      text({
+        "{",
+        "constructor(props){}",
+        "static create(){}",
+        "}"
+      }),
     })
 })
 extend_snip("typescript",{"javascript"})
+
+add_snip("typescript",{
+  snip({
+    trig = "dto",
+    namr = "DTO",
+    dscr = "estrutura base da interface para dto"
+  },{
+      text("export interface "),
+      func(function() return "I"..vim.fn.expand("%:t"):match("[%a-]*"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end):gsub("Dto","RequestDTO"):gsub("-","") end,{}),
+      text("{}"),
+    })
+})
