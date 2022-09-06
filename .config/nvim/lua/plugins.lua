@@ -34,4 +34,5 @@ packer.startup(function(use)
     use 'windwp/nvim-ts-autotag'
     use 'kyazdani42/nvim-tree.lua'
     use 'lewis6991/gitsigns.nvim'
+    use 'tpope/vim-surround'
 end)
