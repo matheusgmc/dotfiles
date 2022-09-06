@@ -13,6 +13,10 @@ local func = ls.function_node
 local choice = ls.choice_node
 local dynamicn = ls.dynamic_node
 
+local function name_usecase() 
+  return vim.fn.expand("%:t"):match("[%a-]*"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end):gsub("-",""):gsub("case","Case") 
+end
+
 add_snip(nil,{
   all ={
     snip({
@@ -43,13 +47,11 @@ add_snip("javascript",{
    namr = "UseCase",
    dscr = "cria uma estrutura simples para casos de uso.",
     },{
-      text("export class "),
-      func(
-        function() return 
-          vim.fn.expand("%:t"):match("[%a-]*"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end):gsub("-","")
-         end,{}),
-      text({"{","constructor(){}","async execute(){","}","}"})
+      func(function()return vim.fn.expand("%:t"):find(".js") and "class " or "export class " end,{}),
+      func(name_usecase,{}),
+      text({"{","constructor(){}","async execute(){","}","}"}),
+      func(function()return vim.fn.expand("%:t"):find(".js") and "module.export = "..name_usecase() or "" end,{}),
+      
     })
 })
-
 extend_snip("typescript",{"javascript"})
