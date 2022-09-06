@@ -24,6 +24,7 @@
 - [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
 - [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [vim-surround](https://github.com/tpope/vim-surround)
 
 ## Vim
 ##### Tema - [dracula](https://draculatheme.com/vim)
