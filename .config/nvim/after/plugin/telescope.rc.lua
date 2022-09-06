@@ -11,7 +11,8 @@ telescope.setup {
         ["q"] = actions.close,
       },
     },
-    file_ignore_patterns = { "dist"}
+    file_ignore_patterns = { "dist","node_modules","target"}
   },
 }
+
 vim.api.nvim_set_keymap("n","<c-f>",":Telescope find_files<CR>", {})
