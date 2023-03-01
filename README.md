@@ -1,32 +1,59 @@
 ## Fonte
- - DroidSansMono Nerd Font Mono
-[NerdFonts](https://www.nerdfonts.com/font-downloads)
-É "necessário" para usar o `vim e neovim` 
+
+- DroidSansMono Nerd Font Mono
+  [NerdFonts](https://www.nerdfonts.com/font-downloads)
+  É "necessário" para usar o `vim e neovim`
 
 ## Neovim
-##### Tema - [dracula.nvim](https://github.com/Mofiqul/dracula.nvim)
+
+##### Tema - [dracula.nvim](https://github.com/folke/tokyonight.nvim)
 
 ##### Plugins (packer)
-- [lualine](https://github.com/nvim-lualine/lualine.nvim)
-- [dracula](https://github.com/Mofiqul/dracula.nvim)
+
+> LSP Config
+
+- [lsp-zero](https://github.com/VonHeikemen/lsp-zero.nvim)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [mason](https://github.com/williamboman/mason.nvim)
+- [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
+
+> Autocompletion
+
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+- [cmp-path](https://github.com/hrsh7th/cmp-path)
 - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
-- [luasnip](https://github.com/L3MON4D3/LuaSnip)
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+- [cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua)
+
+> Snippets
+
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+- [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+
+> Format Support
+
+- [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
+
+> Others
+
+- [](https://github.com/)
+- [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
+- [barbar](https://github.com/romgrk/barbar.nvim)
+- [lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
+- [flutter-tools](https://github.com/akinsho/flutter-tools.nvim)
 - [rust-tools](https://github.com/simrat39/rust-tools.nvim)
 - [presence](https://github.com/andweeb/presence.nvim)
-- [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
-- [prettier](https://github.com/MunifTanjim/prettier.nvim)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
-- [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [vim-surround](https://github.com/tpope/vim-surround)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 ## Vim
+
 ##### Tema - [dracula](https://draculatheme.com/vim)
 
 ##### Plugins (vim-plug)
@@ -50,8 +77,11 @@
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 
 ## Oh-my-zsh
+
 ##### Tema [spaceship](https://github.com/spaceship-prompt/spaceship-prompt)
+
 ##### Plugins
+
 - [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 - [asdf](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
