@@ -18,7 +18,8 @@ tree.setup {
         { key = "v", cb = tree_cb "vsplit" }
       },
     },   
+  },
+  git = {
+    ignore = false
   }
 }
-
-vim.api.nvim_set_keymap("n","<c-b>",":NvimTreeToggle<CR>", {})
