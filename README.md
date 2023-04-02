@@ -6,7 +6,7 @@
 
 ## Neovim
 
-##### Tema - [dracula.nvim](https://github.com/folke/tokyonight.nvim)
+##### Tema - [tokyo-night.nvim](https://github.com/folke/tokyonight.nvim)
 
 ##### Plugins (packer)
 
