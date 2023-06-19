@@ -6,9 +6,9 @@
 
 ## Neovim
 
-##### Tema - [tokyo-night.nvim](https://github.com/folke/tokyonight.nvim)
+##### Tema - [catppuccin](https://github.com/catppuccin/nvim)
 
-##### Plugins (packer)
+##### Plugins - [packer](https://github.com/wbthomason/packer.nvim)
 
 > LSP Config
 
@@ -16,6 +16,7 @@
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [mason](https://github.com/williamboman/mason.nvim)
 - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
+- [mason-null-ls](https://github.com/jay-babu/mason-null-ls.nvim)
 
 > Autocompletion
 
@@ -37,20 +38,16 @@
 
 > Others
 
-- [](https://github.com/)
-- [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 - [barbar](https://github.com/romgrk/barbar.nvim)
 - [lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
-- [flutter-tools](https://github.com/akinsho/flutter-tools.nvim)
-- [rust-tools](https://github.com/simrat39/rust-tools.nvim)
 - [presence](https://github.com/andweeb/presence.nvim)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
-- [vim-surround](https://github.com/tpope/vim-surround)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [barbecue](https://github.com/utilyre/barbecue.nvim)
 
 ## Vim
 
@@ -85,3 +82,9 @@
 - [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 - [asdf](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- usando [Zplug](https://github.com/zplug/zplug)
+    - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
+    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+    - [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode)
+
+
