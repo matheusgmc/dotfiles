@@ -4,6 +4,8 @@
   [NerdFonts](https://www.nerdfonts.com/font-downloads)
   É "necessário" para usar o `vim e neovim`
 
+## Terminal - [Alacritty](https://github.com/alacritty/alacritty)
+
 ## Neovim
 
 ##### Tema - [catppuccin](https://github.com/catppuccin/nvim)
