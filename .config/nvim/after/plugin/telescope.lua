@@ -1,8 +1,8 @@
 local status, telescope = pcall(require, "telescope")
 if (not status) then return end
 local actions = require('telescope.actions')
-local builtin = require("telescope.builtin")
-local config = require("telescope.config")
+-- local builtin = require("telescope.builtin")
+-- local config = require("telescope.config")
 
 telescope.setup {
   defaults = {
@@ -31,8 +31,6 @@ telescope.setup {
     }
   }
 }
-
-require("telescope").load_extension("flutter");
 
 vim.api.nvim_set_keymap("n","<c-f>",":Telescope find_files hidden=true<CR>", {})
 vim.api.nvim_set_keymap("n","<c-g>",":Telescope live_grep <CR>", {})

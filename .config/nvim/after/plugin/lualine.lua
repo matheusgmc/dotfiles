@@ -4,6 +4,6 @@ if(not status) then return end
 
 lualine.setup{
   options = {
-    theme = "tokyonight"
+    theme = "catppuccin"
   }
 }
