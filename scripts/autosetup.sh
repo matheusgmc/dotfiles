@@ -30,6 +30,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 mkdir ~/AppImages &&
 
+cd ~/AppImages &&
+
 wget -c https://github.com/neovim/neovim/releases/download/v0.9.1/nvim.appimage &&
 
 mv ~/AppImages/nvim.appimage ~/AppImages/nvim &&
