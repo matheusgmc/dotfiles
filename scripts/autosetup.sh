@@ -28,7 +28,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ## Softwares que precisam de download externo ##
 
 
-mkdir ~/AppImages &&
+mkdir -p ~/AppImages &&
 
 cd ~/AppImages &&
 
@@ -42,7 +42,7 @@ git clone https://github.com/matheusgmc/dotfiles ~/Documentos/dotfiles &&
 
 ## Adicionando as config para alacritty, nvim e spaceship
 
-cp ~/Documentos/dotfiles/.config/** ~/.config  &&
+cp -r ~/Documentos/dotfiles/.config/** ~/.config  &&
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0 &&
 
@@ -53,7 +53,7 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &&
 
 ## Adicionando as config para o .zshrc
-cp ~/Documentos/dotfiles/.zshrc ~/.zshrc &&
+cp -r ~/Documentos/dotfiles/.zshrc ~/.zshrc &&
 ## .tool-versions para o asdf
 cp ~/Documentos/dotfiles/.tool-versions ~/.tool-versions &&
 
