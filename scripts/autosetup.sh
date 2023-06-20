@@ -14,7 +14,7 @@ sudo apt update &&
 
 ## Instalando pacotes e programas do repositório deb do Ubuntu ##
 
-sudo apt install libfuse2 zsh asdf flatpak alacritty vlc xclip snap dpkg -y &&
+sudo apt install libfuse2 zsh flatpak alacritty vlc xclip snapd dpkg build-essential libssl-dev discord -y &&
 
 ## Instalando pacotes Snap ##
 
@@ -27,21 +27,14 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 ## Softwares que precisam de download externo ##
 
-cd ~/Downloads
-
-## Baixando e Instalando o Discord
-wget -c https://discord.com/api/download?platform=linux&format=deb &&
-sudo dpkg -i *.deb &&
 
 mkdir ~/AppImages &&
 
-cd ~/AppImages &&
-
 wget -c https://github.com/neovim/neovim/releases/download/v0.9.1/nvim.appimage &&
 
-mv ./nvim.appimage ./nvim
+mv ~/AppImages/nvim.appimage ~/AppImages/nvim &&
 
-chmod u+x nvim &&
+chmod u+x ~/AppImages/nvim &&
 
 git clone https://github.com/matheusgmc/dotfiles ~/Documentos/dotfiles &&
 
@@ -49,23 +42,26 @@ git clone https://github.com/matheusgmc/dotfiles ~/Documentos/dotfiles &&
 
 cp ~/Documentos/dotfiles/.config/** ~/.config  &&
 
-## Adicionando as config para o zshrc
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0 &&
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &&
+
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh &&
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &&
+
+## Adicionando as config para o .zshrc
 cp ~/Documentos/dotfiles/.zshrc ~/.zshrc &&
+## .tool-versions para o asdf
+cp ~/Documentos/dotfiles/.tool-versions ~/.tool-versions &&
 
 ## Instalando as linguagens de programação usando asdf
-
-asdf plugin add nodejs &&
-asdf install nodejs latest &&
-asdf install nodejs latest:18 &&
-asdf install nodejs latest:16 &&
-asdf global nodejs latest:18 &&
+zsh -i -c "zplug install && zplug load && asdf plugin add nodejs && asdf install" &&
 
 ## Atualização do sistema ##
 
 sudo apt update && sudo apt dist-upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y &&
 
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-
 #Fim do Script ##
 
-echo "Finalizado"
+echo "Setup Finalizado"
