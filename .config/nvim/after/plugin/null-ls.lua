@@ -11,7 +11,7 @@ null_ls.setup({
 })
 
 require("mason-null-ls").setup({
-	ensure_installed = { "stylua", "prettierd", "eslint_d" },
+	ensure_installed = { "stylua", "prettierd" },
 	automatic_installation = true, -- You can still set this to `true`
 	handlers = {
 		-- Here you can add functions to register sources.

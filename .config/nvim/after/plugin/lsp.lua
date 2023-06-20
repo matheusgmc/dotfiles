@@ -4,6 +4,8 @@ if not status then
 	return
 end
 
+-- local util = require("lspconfig.util")
+
 lsp.preset("recommended")
 
 lsp.ensure_installed({
@@ -88,7 +90,7 @@ lsp.format_on_save({
 		timeout_ms = 10000,
 	},
 	servers = {
-		["null-ls"] = {"javascript","typescript","lua","tsx","jsx"},
+		["null-ls"] = { "javascript", "typescript", "lua", "tsx", "jsx" },
 	},
 })
 

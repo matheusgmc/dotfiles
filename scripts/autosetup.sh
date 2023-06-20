@@ -14,7 +14,7 @@ sudo apt update &&
 
 ## Instalando pacotes e programas do repositório deb do Ubuntu ##
 
-sudo apt install libfuse2 zsh flatpak alacritty vlc xclip snapd dpkg build-essential libssl-dev discord -y &&
+sudo apt install libfuse2 zsh flatpak alacritty vlc xclip snapd dpkg build-essential libssl-dev discord tmux -y &&
 
 ## Instalando pacotes Snap ##
 
@@ -38,11 +38,15 @@ mv ~/AppImages/nvim.appimage ~/AppImages/nvim &&
 
 chmod u+x ~/AppImages/nvim &&
 
+## Pegando minhas configurações do github
 git clone https://github.com/matheusgmc/dotfiles ~/Documentos/dotfiles &&
+
+## Instalando o TPM para o tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
 
 ## Adicionando as config para alacritty, nvim e spaceship
 
-cp -r ~/Documentos/dotfiles/.config/** ~/.config  &&
+cp -r ~/Documentos/dotfiles/.config/** ~/.config &&
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0 &&
 
