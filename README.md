@@ -8,17 +8,14 @@
 
 ## Neovim
 
-##### Tema - [catppuccin](https://github.com/catppuccin/nvim)
+##### Theme - [catppuccin](https://github.com/catppuccin/nvim)
 
-##### Plugins - [packer](https://github.com/wbthomason/packer.nvim)
+##### Plugins - [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 > LSP Config
 
-- [lsp-zero](https://github.com/VonHeikemen/lsp-zero.nvim)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [mason](https://github.com/williamboman/mason.nvim)
-- [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
-- [mason-null-ls](https://github.com/jay-babu/mason-null-ls.nvim)
 
 > Autocompletion
 
@@ -36,7 +33,7 @@
 
 > Format Support
 
-- [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
+- [none-ls](https://github.com/nvimtools/none-ls.nvim)
 
 > Others
 
@@ -50,10 +47,14 @@
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [barbecue](https://github.com/utilyre/barbecue.nvim)
+- [bookmarks](https://github.com/crusj/bookmarks.nvim)
+- [todo-comments](https://github.com/folke/todo-comments.nvim)
+- [noice](https://github.com/folke/noice.nvim)
+- [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
 
 ## Vim
 
-##### Tema - [dracula](https://draculatheme.com/vim)
+##### Theme - [dracula](https://draculatheme.com/vim)
 
 ##### Plugins (vim-plug)
 
@@ -77,14 +78,14 @@
 
 ## Oh-my-zsh
 
-##### Tema [spaceship](https://github.com/spaceship-prompt/spaceship-prompt)
+##### Theme [spaceship](https://github.com/spaceship-prompt/spaceship-prompt)
 
 ##### Plugins
 
 - [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 - [asdf](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- usando [Zplug](https://github.com/zplug/zplug)
+- using [Zplug](https://github.com/zplug/zplug)
     - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
     - [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode)
