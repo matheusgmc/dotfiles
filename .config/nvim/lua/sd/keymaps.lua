@@ -29,6 +29,8 @@ set("n", "<leader>e", vim.diagnostic.open_float, vim.list_extend(opts, { desc = 
 
 set("n", "x", '"_x', opts)
 
+set("n", "<C-L>", ":Lazy<CR>", opts) -- Open Lazy
+
 --- VISUAL MODE ---
 
 set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts) -- Move text up

@@ -21,18 +21,6 @@ autocmd({
   end,
 })
 
-autocmd("FileType", {
-  pattern = "mason",
-  callback = function()
-    local status, mocha = pcall(require, "catppuccin.palettes")
-    if not status then
-      return
-    end
-
-    vim.api.nvim_set_hl(0, "MasonNormal", { bg = mocha.base })
-  end,
-})
-
 autocmd("LspAttach", {
   desc = "LSP",
   group = augroup("lsp", { clear = false }),
