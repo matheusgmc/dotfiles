@@ -1,34 +1,35 @@
 local set = vim.keymap.set
 
 local opts = {
-	noremap = true,
-	silent = true,
+  noremap = true,
+  silent = true,
 }
 
 --- NORMAL MODE ---
+set("n", "<C-b>", ":NvimTreeToggle<CR>", opts)                 -- NvimTree toggle open or close the tree --
+set("n", "+", "<C-a>", opts)                                   -- Increment
+set("n", "-", "<C-x>", opts)                                   -- Decrement
 
--- NvimTree toggle open or close the tree --
-set("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
+set("n", "<A-k>", ":m .-2<CR>==", opts)                        -- Move text up
+set("n", "<A-j>", ":m .+1<CR>==", opts)                        -- Move text down
 
--- Move text up and down
-set("n", "<A-j>", ":m .+1<CR>==", opts)
-set("n", "<A-k>", ":m .-2<CR>==", opts)
+set("n", "<C-a>", "gg<S-v>G")                                  -- Select all
 
------ Barbar | Tab Navigation -----
--- Move to previous/next
-set("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
-set("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
--- -- Re-order to previous/next
-set("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
-set("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
-set("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+set("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)             -- Move to previous buffer
+set("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)                 -- Move to next buffer
 
------ GitSigns --------------------------------
-set("n", "<leader>hp", "<Cmd>Gitsigns preview_hunk<CR>", opts)
+set("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)         -- Re-order to previous buffer
+set("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)             -- Re-order to next buffer
 
---- Visual ------------------------------------------
--- Move text up and down
-set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
-set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+set("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)                -- Close current buffer
 
-set("v", "p", "_dP", opts)
+set("n", "<leader>hp", "<Cmd>Gitsigns preview_hunk<CR>", opts) -- Git preview hunk
+
+set("n", "<leader>e", vim.diagnostic.open_float, vim.list_extend(opts, { desc = "Diagnostic Popup" }))
+
+set("n", "x", '"_x', opts)
+
+--- VISUAL MODE ---
+
+set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts) -- Move text up
+set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts) -- Move text down

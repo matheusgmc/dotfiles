@@ -1,3 +1,4 @@
-require("sd.base")
-require("sd.packer")
-require("sd.keymaps")
+require("sd/base")
+require("sd/lazy")
+require("sd/keymaps")
+require("sd/autocmds")
