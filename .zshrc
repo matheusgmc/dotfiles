@@ -3,10 +3,19 @@
 source ~/.zplug/init.zsh
 
 export PATH=$PATH:~/AppImages
+export ANDROID_HOME=~/Android/Sdk
+export FLYCTL_INSTALL=~/.fly
+
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$FLYCTL_INSTALL/bin
+export PATH=$PATH:$HOME/Documentos/bins
+export PATH=$PATH:$HOME/.asdf/shims
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -100,11 +109,18 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias update="sudo apt update && sudo apt upgrade"
+
 alias zshconfig="nvim ~/.zshrc"
 alias spaceconfig="nvim ~/.config/spaceship/spaceship.zsh"
-alias update="sudo apt update && sudo apt upgrade"
 alias alaconfig="nvim ~/.config/alacritty/alacritty.yml"
 alias nvimconfig="nvim ~/.config/nvim/"
+alias tmuxconfig="nvim ~/.config/tmux/"
+alias pjs="cd ~/Documentos/projects"
+alias works="cd ~/Documentos/works"
+alias tsinit="npm init -y && npm install -D typescript tsx && npx tsc --init"
+alias arch="distrobox enter arch"
+alias lg="lazygit"
 
 
 zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
