@@ -77,7 +77,7 @@
 
 ## Oh-my-zsh
 
-##### Theme [spaceship](https://github.com/spaceship-prompt/spaceship-prompt)
+##### Theme - [spaceship](https://github.com/spaceship-prompt/spaceship-prompt)
 
 ##### Plugins
 
@@ -88,3 +88,10 @@
     - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
     - [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode)
+
+## Tmux
+
+##### Theme - [catppuccin](https://github.com/dreamsofcode-io/catppuccin-tmux)
+
+##### Plugins (Manual)
+- [tmux-sessionizer](https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer)
