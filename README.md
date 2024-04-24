@@ -33,7 +33,7 @@
 
 > Format Support
 
-- [none-ls](https://github.com/nvimtools/none-ls.nvim)
+- [conform.nvim](https://github.com/stevearc/conform.nvim)
 
 > Others
 
@@ -47,7 +47,6 @@
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [barbecue](https://github.com/utilyre/barbecue.nvim)
-- [bookmarks](https://github.com/crusj/bookmarks.nvim)
 - [todo-comments](https://github.com/folke/todo-comments.nvim)
 - [noice](https://github.com/folke/noice.nvim)
 - [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
@@ -89,5 +88,3 @@
     - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
     - [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode)
-
-
