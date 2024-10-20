@@ -13,8 +13,47 @@ end
 
 return {
 	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			modes = {
+				mydiags = {
+					mode = "diagnostics", -- inherit from diagnostics mode
+					filter = {
+						any = {
+							buf = 0, -- current buffer
+							{
+								severity = vim.diagnostic.severity.ERROR, -- errors only
+								-- limit to files in the current project
+								function(item)
+									return item.filename:find((vim.loop or vim.uv).cwd(), 1, true)
+								end,
+							},
+						},
+					},
+				},
+			},
+		},
+		cmd = "Trouble",
+		keys = {
+			{
+				"<leader>xx",
+				"<cmd>Trouble diagnostics toggle<cr>",
+				desc = "Diagnostics (Trouble)",
+			},
+		},
+	},
+	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
+	{
+		"windwp/nvim-autopairs",
+		opts = {},
+	},
+	{
+		"windwp/nvim-ts-autotag",
 		opts = {},
 	},
 	{
@@ -24,10 +63,6 @@ return {
 		build = function()
 			vim.fn["mkdp#util#install"]()
 		end,
-	},
-	{
-		"windwp/nvim-autopairs",
-		opts = {},
 	},
 	{
 		"hrsh7th/nvim-cmp",
@@ -90,40 +125,24 @@ return {
 		end,
 	},
 	{
-		"folke/trouble.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = {},
-	},
-	{
 		"lewis6991/gitsigns.nvim",
 		config = function()
 			vim.cmd([[highlight GitSignsCurrentLineBlame guifg=#767b82]])
+
 			require("gitsigns").setup({
 				signs = {
-					add = { hl = "GitSignsAdd", text = "│", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
+					add = { text = "│" },
 					change = {
-						hl = "GitSignsChange",
 						text = "│",
-						numhl = "GitSignsChangeNr",
-						linehl = "GitSignsChangeLn",
 					},
 					delete = {
-						hl = "GitSignsDelete",
 						text = "_",
-						numhl = "GitSignsDeleteNr",
-						linehl = "GitSignsDeleteLn",
 					},
 					topdelete = {
-						hl = "GitSignsDelete",
 						text = "‾",
-						numhl = "GitSignsDeleteNr",
-						linehl = "GitSignsDeleteLn",
 					},
 					changedelete = {
-						hl = "GitSignsChange",
 						text = "~",
-						numhl = "GitSignsChangeNr",
-						linehl = "GitSignsChangeLn",
 					},
 				},
 				on_attach = function(bufnr)

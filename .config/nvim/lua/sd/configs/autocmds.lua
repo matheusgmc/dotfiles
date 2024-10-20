@@ -2,18 +2,6 @@ local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 local keymap = vim.keymap.set
 
-local function inlay_hints(buf, value)
-	local ih = vim.lsp.buf.inlay_hint or vim.lsp.inlay_hint
-	if type(ih) == "function" then
-		ih(buf, value)
-	elseif type(ih) == "table" and ih.enable then
-		if value == nil then
-			value = not ih.is_enabled(buf)
-		end
-		ih.enable(buf, value)
-	end
-end
-
 autocmd({
 	-- "WinScrolled", -- or WinResized on NVIM-v0.9 and higher
 	"CursorHold",
@@ -38,7 +26,6 @@ autocmd("LspAttach", {
 	group = augroup("lsp", { clear = false }),
 	callback = function(ev)
 		local lsp = vim.lsp
-		local client = vim.lsp.get_client_by_id(ev.data.client_id)
 		-- Mappings
 		local opts = {
 			buffer = ev.buf,
@@ -46,10 +33,6 @@ autocmd("LspAttach", {
 			silent = true,
 			desc = "Toggle Hints",
 		}
-
-		if client.supports_method("textDocument/inlayHint") then
-			inlay_hints(ev.buf, true)
-		end
 
 		-- keymap("n", "<A-h>", function()
 		-- 	lsp.inlay_hint(ev.buf, nil)

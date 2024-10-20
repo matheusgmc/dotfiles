@@ -5,9 +5,10 @@ return {
 		cmd = { "ConformInfo" },
 		opts = {
 			formatters_by_ft = {
-				javascript = { "prettierd", "prettier", "eslint_d" },
-				typescript = { "prettierd", "prettier", "eslint_d" },
-				typescriptreact = { "prettierd", "prettier", "eslint_d" },
+				javascript = { "prettierd" },
+				javascriptreact = { "prettierd" },
+				typescript = { "prettierd" },
+				typescriptreact = { "prettierd" },
 				rust = { "rustfmt" },
 				lua = { "stylua" },
 			},
@@ -20,14 +21,24 @@ return {
 	{
 		"williamboman/mason.nvim",
 		opts = {
-			ensure_installed = {
-				"stylua",
-				"luacheck",
-				"tailwindcss-language-server",
-				"typescript-language-server",
-			},
 			ui = {
 				border = "rounded",
+			},
+		},
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		opts = {
+			ensure_installed = {
+				"tailwindcss",
+				"tsserver",
+				"lua_ls",
+				"prismals",
+				"rust_analyzer",
+				"dockerls",
+				"docker_compose_language_service",
+				"eslint",
+				"jsonls",
 			},
 		},
 	},
@@ -41,7 +52,12 @@ return {
 			inlay_hints = { enabled = true },
 			servers = {
 				rust_analyzer = {},
-				tailwindcss = {},
+				tailwindcss = {
+					settings = {
+						classAttributes = { "labelClassName" },
+					},
+				},
+				clangd = {},
 				prismals = {},
 				pylsp = {},
 				csharp_ls = {},

@@ -21,7 +21,6 @@ local action = function(path)
 	vim.cmd("NvimTreeOpen")
 	vim.cmd("1bd")
 end
-
 return {
 	{
 		"romgrk/barbar.nvim",
@@ -60,11 +59,18 @@ return {
 			-- "rcarriga/nvim-notify",
 		},
 		opts = {
+			popupmenu = {
+				enabled = false,
+			},
 			status = {
 				lsp_progress = { event = "lsp", kind = "progress" },
 			},
 			cmdline = {
+				enabled = true,
 				view = "cmdline",
+				format = {
+					input = { view = "cmdline", icon = "󰥻" },
+				},
 			},
 			messages = {
 				enabled = false,
@@ -195,9 +201,6 @@ return {
 						"encoding",
 						"fileformat",
 						"filetype",
-					},
-					lualine_z = {
-						{ "location", separator = { right = "" }, left_padding = 2 },
 					},
 				},
 			})

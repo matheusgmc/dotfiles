@@ -21,6 +21,9 @@ return {
 
 			require("nvim-tree").setup({
 				on_attach = on_attach,
+				update_focused_file = {
+					enable = true,
+				},
 				git = {
 					ignore = false,
 				},
@@ -58,7 +61,20 @@ return {
 						["q"] = actions.close,
 					},
 				},
-				file_ignore_patterns = { "dist", "node_modules", "target", ".git", "build/", ".next" },
+				file_ignore_patterns = {
+					"dist",
+					"node_modules",
+					"target",
+					".git",
+					"build/",
+					"lib/",
+					".next",
+					"package%-lock.json",
+					"pnpm%-lock.yaml",
+					"ios",
+					"android",
+					".expo",
+				},
 				hidden = true,
 				preview = false,
 			}

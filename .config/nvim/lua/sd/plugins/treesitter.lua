@@ -1,7 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	dependencies = { "windwp/nvim-ts-autotag" },
 	opts = {
 		highlight = {
 			enable = true,
@@ -31,9 +30,7 @@ return {
 			"markdown_inline",
 			"go",
 			"http",
-		},
-		autotag = {
-			enable = true,
+			"c",
 		},
 	},
 	config = function(_, opts)
